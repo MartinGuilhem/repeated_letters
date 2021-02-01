@@ -13,12 +13,33 @@
     /*Create an array with your name where each position corresponds to a letter.
         Loop this array and console each of the letters.
     */
-    var arr = ['M', 'A', 'R', 'T', 'I', 'N'];
+    var arr = ['M', 'A', 'R', 'T', '1', 'I', 'N'];
     
     arr.forEach(letter => { 
         console.log(letter)
-    });  
+    });
+    console.log("\n\n");
 
+    //EX2
+    /*
+    In the loop, if the letter is a vowel, print on the console: ‘I found the VOWEL: __’. 
+    Otherwise, print: ‘I found the CONSONANT: __’.
+    If you find a number, display: ‘People’s names do not contain the number: __’
+    */
+    arr.forEach(letter => {
+        if (letter === 'A' 
+        || letter === 'E' 
+        || letter === 'I' 
+        || letter === 'O' 
+        || letter === 'U')
+        {
+            console.log("I found the VOWEL:"+letter);
+        } else if(!isNaN(letter)) {
+            console.log("People’s names do not contain the number:"+letter);
+        } else {
+            console.log("I found the CONSONANT:"+letter);
+        }       
+    });
 
 </script>    
 </body>
