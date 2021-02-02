@@ -13,12 +13,11 @@
     /*Create an array with your name where each position corresponds to a letter.
         Loop this array and console each of the letters.
     */
-    var arr = ['M', 'A', 'R', 'T', '1', 'I', 'N'];
+    var arr = ['M', 'A', 'R', 'T', '1', 'I', 'N', 'I', 'M'];
     
     arr.forEach(letter => { 
         console.log(letter)
     });
-    console.log("\n\n");
 
     //EX2
     /*
@@ -40,6 +39,21 @@
             console.log("I found the CONSONANT:"+letter);
         }       
     });
+
+    //EX3
+    /*
+    Store the letters of the array and the number of times they appear on a Map.
+    */
+    myMap = new Map();
+
+    arr.forEach(Character => {
+        if(myMap.has(Character)) {
+            myMap.set(Character, myMap.get(Character) + 1)
+        } else {
+            myMap.set(Character, 1);
+        }       
+    });
+    console.log(myMap);
 
 </script>    
 </body>
